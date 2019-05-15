@@ -18,10 +18,9 @@ ActiveRecord::Schema.define(version: 2019_05_15_155241) do
   create_table "addresses", force: :cascade do |t|
     t.bigint "course_id"
     t.string "address_first"
-    t.string "address_second"
-    t.string "street"
+    t.string "address_second", default: ""
     t.string "city"
-    t.string "country"
+    t.string "zipcode"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_addresses_on_course_id"
@@ -36,9 +35,9 @@ ActiveRecord::Schema.define(version: 2019_05_15_155241) do
   create_table "courses", force: :cascade do |t|
     t.string "title"
     t.bigint "category_id"
-    t.string "description"
-    t.string "instructor"
-    t.string "url"
+    t.string "description", default: "none"
+    t.string "instructor", default: "staff"
+    t.string "url", default: "none"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_courses_on_category_id"
@@ -55,8 +54,8 @@ ActiveRecord::Schema.define(version: 2019_05_15_155241) do
 
   create_table "images", force: :cascade do |t|
     t.bigint "course_id"
-    t.string "name"
-    t.string "description"
+    t.string "name", default: "none"
+    t.string "description", default: "none"
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
