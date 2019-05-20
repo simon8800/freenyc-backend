@@ -2,14 +2,16 @@
 
 class CategorySerializer < ActiveModel::Serializer
   has_many :courses
-  attributes :name, :courses, :images
+  attributes :id, :name, :courses, :images
 
   # JSON the course title and random image_url as an object in array
   def courses
     object.courses.map do |course|
       {
+        id: course.id,
         title: course.title,
-        image_url: course.images.sample.url
+        images: course.images,
+        short_description: course.short_description
       }
     end
   end

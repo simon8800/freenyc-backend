@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_05_15_155241) do
   create_table "courses", force: :cascade do |t|
     t.string "title"
     t.bigint "category_id"
+    t.string "short_description", default: "none"
     t.string "description", default: "none"
     t.string "instructor", default: "staff"
     t.string "url", default: "none"

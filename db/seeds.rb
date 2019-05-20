@@ -13,6 +13,7 @@ foreign_language = Category.create(name: 'Foreign Language')
 ######################## City Wing Tsun Athletic Association https://www.citywt.com/ ###############
 cwtaa = Course.create(
   title: 'CWTAA Intro Class',
+  short_description: 'Chinese Kung Fu',
   description: 'Learn to protect yourself with Wing Tsun',
   instructor: 'Alex Richter',
   url: 'https://www.citywt.com/',
@@ -45,7 +46,8 @@ cwtaa_2 = Image.create(
 ############################### Brooklyn Wing Tsun http://www.bkwingtsun.com/ ###############
 bkwt = Course.create(
   title: 'BKWT Intro Class',
-  description: 'Learn to protect yourself with Wing Tsun',
+  short_description: 'Chinese Kung Fu',
+  description: 'Try a free Intro to Wing Tsun class with Sifu Ethan Hampton at Brooklyn Wing Tsun!',
   instructor: 'Ethan Hampton',
   url: 'http://www.bkwingtsun.com/',
   category_id: martial_arts.id
@@ -76,7 +78,8 @@ bkwt_2 = Image.create(
 ############################################ Mandarin Level 1 ###############
 mandarin = Course.create(
   title: 'Mandarin Level 1',
-  description: 'Learn beginner Mandarin',
+  short_description: 'Beginner Mandarin',
+  description: 'Learn basic Mandarin for greeting, traveling, and more day-to-day phrases',
   instructor: 'Staff',
   url: 'http://alesn.org/',
   category_id: foreign_language.id
