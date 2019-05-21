@@ -16,7 +16,7 @@ class Api::V1::UsersController < ApplicationController
       @token = encode_token(user_id: @user.id)
       render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
     else
-      render json: { error: "That email has already been used." }, status: :not_acceptable
+      render json: { error: "That email is already in use." }, status: :not_acceptable
     end
   end
 
