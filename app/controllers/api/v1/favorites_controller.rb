@@ -1,4 +1,6 @@
 class Api::V1::FavoritesController < ApplicationController
+  skip_before_action :authorized
+  
   def create
     @user = User.find_by(email: params[:email])
     @favorite = Favorite.create(user_id: @user.id, course_id: params[:course_id])
