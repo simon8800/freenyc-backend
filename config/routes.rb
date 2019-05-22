@@ -6,7 +6,8 @@ Rails.application.routes.draw do
       resources :categories
       resources :courses
       resources :users
-      resources :favorites
+      resources :favorites, except: [:destroy]
+      delete '/favorites', to: 'favorites#destroy'
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
     end

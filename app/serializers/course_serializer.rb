@@ -3,7 +3,7 @@
 class CourseSerializer < ActiveModel::Serializer
   has_many :images
   has_many :addresses
-  attributes :id, :description, :short_description, :instructor, :url, :title
+  attributes :id, :description, :short_description, :instructor, :url, :title, :images
 
   def images
     object.images.map do |image|
