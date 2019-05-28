@@ -20,7 +20,9 @@ class CourseSerializer < ActiveModel::Serializer
         address_first: address.address_first,
         address_second: address.address_second,
         city: address.city,
-        zipcode: address.zipcode
+        zipcode: address.zipcode,
+        lat: address.lat,
+        lng: address.lng
       }
     end
   end

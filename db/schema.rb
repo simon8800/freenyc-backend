@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2019_05_15_155241) do
     t.string "address_second", default: ""
     t.string "city"
     t.string "zipcode"
+    t.float "lat"
+    t.float "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_addresses_on_course_id"

@@ -8,7 +8,8 @@ class CreateAddresses < ActiveRecord::Migration[5.2]
       t.string :address_second, default: ''
       t.string :city
       t.string :zipcode
-
+      t.float :lat
+      t.float :lng
       t.timestamps
     end
   end

@@ -7,6 +7,7 @@
 ############################## Categories ##############################
 martial_arts = Category.create(name: 'Martial Arts')
 foreign_language = Category.create(name: 'Foreign Language')
+music = Category.create(name: 'Music')
 
 ############################## Courses ##############################
 
@@ -14,7 +15,7 @@ foreign_language = Category.create(name: 'Foreign Language')
 cwtaa = Course.create(
   title: 'CWTAA Intro Class',
   short_description: 'Chinese Kung Fu',
-  description: 'Learn to protect yourself with Wing Tsun',
+  description: 'You can try a free intro class to Wing Tsun with City Wing Tsun.',
   instructor: 'Alex Richter',
   url: 'https://www.citywt.com/',
   category_id: martial_arts.id
@@ -26,7 +27,9 @@ cwtaa_address = Address.create(
   address_second: '4 fl',
   city: 'New York, NY',
   course_id: cwtaa.id,
-  zipcode: '10018'
+  zipcode: '10018',
+  lat: 40.752370,
+  lng: -73.985460
 )
 
 cwtaa_1 = Image.create(
@@ -59,7 +62,9 @@ bkwt_address = Address.create(
   address_second: '2nd flr',
   city: 'Brooklyn, NY',
   course_id: bkwt.id,
-  zipcode: '11215'
+  zipcode: '11215',
+  lat: 40.674470,
+  lng: -73.975820
 )
 
 bkwt_1 = Image.create(
@@ -90,7 +95,9 @@ mandarin_address = Address.create(
   address_second: '',
   city: 'New York, NY',
   course_id: mandarin.id,
-  zipcode: '10002'
+  zipcode: '10002',
+  lat: 40.716450,
+  lng: -73.993530
 )
 
 mandarin_1 = Image.create(
@@ -105,4 +112,38 @@ mandarin_2 = Image.create(
   description: 'Streets of Chinatown',
   url: 'https://images.pexels.com/photos/1115175/pexels-photo-1115175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=550&w=550',
   course_id: mandarin.id
+)
+
+#################### Guitar ######################
+guitar = Course.create(
+  title: "Guitar",
+  short_description: "Learn to play Guitar",
+  description: "Classes on Saturday from 12:30PM - 2:00PM. Just bring an ID!",
+  instructor: "Staff",
+  url: "http://alesn.org/",
+  category_id: music.id
+)
+
+guitar_address = Address.create(
+  address_first: '100 Hester St',
+  address_second: '',
+  city: 'New York, NY',
+  course_id: guitar.id,
+  zipcode: '10002',
+  lat: 40.716450,
+  lng: -73.993530
+)
+
+guitar_1 = Image.create(
+  name: "Guitar",
+  description: "Person strumming a guitar",
+  url: 'https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  course_id: guitar.id
+)
+
+guitar_2 = Image.create(
+  name: "Guitar",
+  description: "Person strumming a guitar",
+  url: 'https://images.pexels.com/photos/164809/pexels-photo-164809.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  course_id: guitar.id
 )
