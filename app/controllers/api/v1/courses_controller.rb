@@ -10,4 +10,5 @@ class Api::V1::CoursesController < ApplicationController
     @course = Course.find(params[:id])
     render json: @course
   end
+  
 end

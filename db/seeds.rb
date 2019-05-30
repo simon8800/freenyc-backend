@@ -174,6 +174,7 @@ yttp_address_2 = Address.create(
   address_first: "12 Saint Marks Place",
   address_second: "2R",
   city: "New York, NY",
+  course_id: yttp.id,
   zipcode: 10003,
   lat: 40.729113,
   lng: -73.989239
@@ -183,6 +184,7 @@ yttp_address_3 = Address.create(
   address_first: "115 W. 27th Street",
   address_second: "3rd Floor",
   city: "New York, NY",
+  course_id: yttp.id,
   zipcode: 10001,
   lat: 40.745872,
   lng: -73.991778
@@ -192,6 +194,7 @@ yttp_address_4 = Address.create(
   address_first: "1017 6th Avenue",
   address_second: "38th Street, 3rd Fl",
   city: ny,
+  course_id: yttp.id,
   zipcode: 10018,
   lat: 40.752351,
   lng: -73.986282
@@ -201,6 +204,7 @@ yttp_address_5 = Address.create(
   address_first: "2710 Broadway",
   address_second: "3rd Floor",
   city: ny,
+  course_id: yttp.id,
   zipcode: 10025,
   lat: 40.799500,
   lng: -73.968036

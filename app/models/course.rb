@@ -6,4 +6,8 @@ class Course < ApplicationRecord
   has_many :addresses
   has_many :images
   has_many :users, through: :favorites
+
+  def self.top_three
+    puts 'waddup'
+  end
 end
